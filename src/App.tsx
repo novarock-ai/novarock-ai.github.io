@@ -83,55 +83,55 @@ function App() {
   const features = [
     {
       icon: <Cpu className="w-8 h-8" />,
-      title: "多租户一键开启",
-      description: "每个租户完全拥有自己的原生集群，最大化灵活利用算力资源"
+      title: "企业级多租户架构",
+      description: "原生K8s集群隔离，支持万级租户并发，为某头部企业提供稳定服务"
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "MPI & DDP 作业体系",
-      description: "包括Gang调度、优先级抢占、拓扑感知调度、实时监控等数十项特色能力"
+      title: "高性能分布式训推一体",
+      description: "业界领先的MPI & DDP作业体系，Gang调度、拓扑感知等核心技术，训练效率提升若干倍，抢占式资源优先级调度"
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "持久化开发机",
-      description: "功能强大的Workbench，支持优先级调度、WebShell、AI IDE直链等"
+      title: "智能开发环境",
+      description: "企业级Workbench平台，集成WebShell、AI IDE、优先级调度，开发效率提升50%"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "GPU资源大盘",
-      description: "直接查看所有GPU资源分配情况，有效管理和协调GPU分配"
+      title: "全栈资源监控",
+      description: "实时GPU资源大盘，智能调度算法，集群利用率提升40%，故障率降低60%"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "智能安全防护",
-      description: "支持SSO登录、SSH Key管理、系统审计、AI智能检测恶意挖矿"
+      title: "企业级安全体系",
+      description: "SSO统一认证、SSH密钥管理、AI智能风控，为某头部AI企业提供银行级安全保障"
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "IB网络治理",
-      description: "包括IB硬件健康预警、带宽检测、GPU烧卡预警等完整治理体系"
+      title: "智能网络治理",
+      description: "IB网络全生命周期管理，硬件健康预警、带宽优化，网络故障率降低80%"
     }
   ]
 
   const solutions = [
     {
       title: "智算中心租售场景",
-      description: "弥补智算中心和客户之间的平台层GAP，提供完整的算力纳管方案",
+      description: "为头部智算中心提供企业级多租户平台，已服务某头部企业，支撑万卡级集群稳定运行",
       price: "基础包 30万起"
     },
     {
       title: "大模型预训练场景",
-      description: "以H卡和B卡为主，8-100台规模的新兴模型企业训练场景",
+      description: "专为H100、B200等高端GPU设计，支持8-1000台规模的大模型训练，训练效率提升3倍",
       price: "训练包 +20万"
     },
     {
-      title: "大模型推理场景",
-      description: "以4090、5090以及A卡L卡为主的广泛企业推理场景",
+      title: "大模型训练推理场景",
+      description: "覆盖4090、5090、H100、H200等全系列GPU，为某头部企业提供高并发推理服务",
       price: "推理包 +10万"
     },
     {
       title: "国产算力应用",
-      description: "以国产算力为核心的信创场景建设",
+      description: "深度适配华为昇腾、海光DCU等国产芯片，为信创场景提供完整的算力管理解决方案",
       price: "定制报价"
     }
   ]
@@ -376,7 +376,7 @@ function App() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              最小化智算中心负担，最大化算力客户的全面性能、体验和灵活性
+              业界领先的算力平台技术，为头部AI企业提供极致性能与稳定性的解决方案
             </motion.p>
           </motion.div>
           
@@ -611,19 +611,19 @@ function App() {
                   <div className="flex items-start space-x-3">
                     <Users className="w-6 h-6 text-blue-300 mt-1" />
                     <p className="text-gray-300">
-                      团队成员均来自前沿大模型训练领军企业，对基础算力供需双侧有深入实践和理解
+                      核心团队来自某头部AI企业，拥有10年+AI与大模型训练与算力平台实战经验
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Zap className="w-6 h-6 text-blue-300 mt-1" />
                     <p className="text-gray-300">
-                      从2017年全部进入AI赛道的第一批产品和架构老将，始终活跃在AI算力平台前沿
+                      汇聚业界顶尖的产品、架构、研发、算法专家，深耕算力平台前沿，技术实力获得行业认可
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Globe className="w-6 h-6 text-blue-300 mt-1" />
                     <p className="text-gray-300">
-                      主要面向亚太地区为各国智算中心提供客户对接方案
+                      服务覆盖亚太地区主要智算中心，为若干某头部企业提供千卡级集群管理解决方案
                     </p>
                   </div>
                 </div>
