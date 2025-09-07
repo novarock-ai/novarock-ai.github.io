@@ -82,62 +82,62 @@ function App() {
 
   const features = [
     {
-      icon: <Cpu className="w-8 h-8" />,
-      title: "企业级多租户架构",
-      description: "原生K8s集群隔离，支持万级租户并发，为某头部企业提供稳定服务"
+      icon: <Zap className="w-8 h-8" />,
+      title: "大模型训练",
+      description: "MPI & DDP作业体系，Gang调度、优先级抢占、拓扑感知调度，支持千卡级H100集群，训练效率提升3倍以上"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "高性能分布式训推一体",
-      description: "业界领先的MPI & DDP作业体系，Gang调度、拓扑感知等核心技术，训练效率提升若干倍，抢占式资源优先级调度"
+      icon: <Cpu className="w-8 h-8" />,
+      title: "高性能推理",
+      description: "覆盖4090、5090、H100、H200等全系列GPU，高并发推理服务，支持多模型并行部署，推理延迟优化"
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "智能开发环境",
-      description: "企业级Workbench平台，集成WebShell、AI IDE、优先级调度，开发效率提升50%"
+      title: "智能研发",
+      description: "Workbench持久化开发机，WebShell、AI IDE一键直链，超高性能零延迟持久化，灵活挂载OSS和并行文件系统"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "多租户管理",
+      description: "每个租户完全拥有自己的原生集群，最大灵活利用，支持万级租户并发，为头部企业提供稳定服务"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "全栈资源监控",
-      description: "实时GPU资源大盘，智能调度算法，集群利用率提升40%，故障率降低60%"
+      title: "资源统一调度",
+      description: "GPU资源大盘统一管理，训练、推理、研发任务智能调度，支持跨场景资源复用，大幅提升算力利用率"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "企业级安全体系",
-      description: "SSO统一认证、SSH密钥管理、AI智能风控，为某头部AI企业提供银行级安全保障"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "智能网络治理",
-      description: "IB网络全生命周期管理，硬件健康预警、带宽优化，网络故障率降低80%"
+      title: "企业级安全",
+      description: "支持各种SSO一键登录，SSH Key畅通个人容器，系统审计无处遁逃，AI智能检测恶意挖矿等"
     }
   ]
 
   const solutions = [
     {
-      title: "智算中心租售场景",
-      description: "为头部智算中心提供企业级多租户平台，已服务某头部企业，支撑万卡级集群稳定运行",
+      title: "智算中心算力供应侧",
+      description: "解决客户缺乏专业裸金属资源纳管能力，提供一站式交付模式，实现算力基础溢价和交付周期缩短",
       price: "基础包 30万起"
     },
     {
-      title: "大模型预训练场景",
-      description: "专为H100、B200等高端GPU设计，支持8-1000台规模的大模型训练，训练效率提升3倍",
+      title: "大模型训练场景",
+      description: "专为H100、B200等高端GPU设计，解决训练数据高效加载、Checkpoint存储优化、IB带宽瓶颈等专业问题",
       price: "训练包 +20万"
     },
     {
-      title: "大模型训练推理场景",
-      description: "覆盖4090、5090、H100、H200等全系列GPU，为某头部企业提供高并发推理服务",
+      title: "AI团队需求侧",
+      description: "提供训练-推理-研发一体化平台，深度适配大模型专业研发场景，支持高度可控与开放架构",
       price: "推理包 +10万"
     },
     {
-      title: "国产算力应用",
-      description: "深度适配华为昇腾、海光DCU等国产芯片，为信创场景提供完整的算力管理解决方案",
+      title: "数据安全与合规",
+      description: "提供体系化安全方案与合规认证，支持敏感数据处理、跨境流动、逻辑隔离及隐私保护等刚性要求",
       price: "定制报价"
     }
   ]
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden" style={{backgroundImage: 'url(/tech-hero-background.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden" style={{backgroundImage: 'url(/tech-hero-background.png)', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'}}>
       {/* Particle Background */}
       <ParticleBackground />
       
@@ -246,7 +246,7 @@ function App() {
             >
               <Badge className="mb-6 bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30 transition-all duration-300">
                 <Sparkles className="w-4 h-4 mr-2" />
-                面向智算中心的通用大模型训推一体平台
+                新一代大模型训推研一体平台产品解决方案
               </Badge>
             </motion.div>
             
@@ -271,7 +271,7 @@ function App() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                  <TypingAnimation text="重新定义算力平台" />
+                  <TypingAnimation text="一站式解决算力供需痛点" />
                 </motion.span>
               </h1>
             </motion.div>
@@ -282,8 +282,8 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              专为智算中心设计的大模型训练平台，提供极致的客户体验和完整的算力管理解决方案。
-              支撑千卡H100级别关键客户，已在多个智算中心稳定落地。
+              面向智算中心与AI团队的一体化平台，集成大规模训练、推理与研发全流程能力。
+              已成功助力某智算中心稳定支持多个千卡级H100集群的关键客户。
             </motion.p>
             
             <motion.div 
@@ -376,14 +376,101 @@ function App() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              业界领先的算力平台技术，为头部AI企业提供极致性能与稳定性的解决方案
+              业界领先的训推研一体化平台，最小化智算中心负担，最大化算力客户的全面性能、体验和灵活性
             </motion.p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          {/* 训推研三大核心功能 */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {features.slice(0, 3).map((feature, index) => (
               <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.2,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  y: -15,
+                  scale: 1.05,
+                  transition: { duration: 0.3 }
+                }}
+                className="relative"
+              >
+                <Card className="bg-gradient-to-br from-slate-900/80 to-blue-900/20 border-blue-500/30 hover:border-blue-500/60 transition-all duration-300 relative overflow-hidden group h-full">
+                  {/* 特殊渐变背景 */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-cyan-500/10 opacity-0 group-hover:opacity-100"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileHover={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  
+                  {/* 特殊边框效果 */}
+                  <motion.div
+                    className="absolute inset-0 rounded-lg"
+                    style={{
+                      background: "linear-gradient(45deg, transparent, #3b82f6, transparent)",
+                      padding: "2px",
+                    }}
+                    initial={{ rotate: 0 }}
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 2, ease: "linear" }}
+                  >
+                    <div className="w-full h-full bg-gradient-to-br from-slate-900/80 to-blue-900/20 rounded-lg" />
+                  </motion.div>
+                  
+                  <CardHeader className="relative z-10">
+                    <div className="flex items-center space-x-4">
+                      <motion.div 
+                        className="p-4 bg-gradient-to-br from-blue-500/30 to-purple-500/20 rounded-xl text-blue-300 relative"
+                        whileHover={{ 
+                          scale: 1.1,
+                          rotate: 360,
+                          backgroundColor: "rgba(59, 130, 246, 0.4)"
+                        }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        {feature.icon}
+                        <motion.div
+                          className="absolute inset-0 bg-blue-400/20 rounded-xl"
+                          initial={{ scale: 0, opacity: 0 }}
+                          whileHover={{ scale: 1.2, opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </motion.div>
+                      <CardTitle className="text-white text-xl group-hover:text-blue-300 transition-colors">
+                        {feature.title}
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="relative z-10">
+                    <CardDescription className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors text-base">
+                      {feature.description}
+                    </CardDescription>
+                  </CardContent>
+                  
+                  {/* 特殊光效 */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.8 }}
+                  />
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 其他功能特性 */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.slice(3).map((feature, index) => (
+              <motion.div
+                key={index + 3}
                 initial={{ opacity: 0, y: 50, rotateX: -15 }}
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 transition={{ 
@@ -504,7 +591,7 @@ function App() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              覆盖智算中心租售、大模型训练推理、国产算力应用等多种场景
+              系统性解决算力供应端与需求端的核心痛点，提供成熟可靠的大模型基础设施能力
             </motion.p>
           </motion.div>
           
@@ -617,13 +704,13 @@ function App() {
                   <div className="flex items-start space-x-3">
                     <Zap className="w-6 h-6 text-blue-300 mt-1" />
                     <p className="text-gray-300">
-                      汇聚业界顶尖的产品、架构、研发、算法专家，深耕算力平台前沿，技术实力获得行业认可
+                      基于团队在大模型训练、推理及研发领域的技术积累，以及对AI PaaS行业的持续洞察
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Globe className="w-6 h-6 text-blue-300 mt-1" />
                     <p className="text-gray-300">
-                      服务覆盖亚太地区主要智算中心，为若干某头部企业提供千卡级集群管理解决方案
+                      已成功助力某智算中心稳定支持多个千卡级H100集群的关键客户，输出成熟可靠的行业级解决方案
                     </p>
                   </div>
                 </div>
@@ -634,7 +721,7 @@ function App() {
                 <div className="space-y-3 text-gray-300">
                   <p><strong className="text-blue-300">Nova:</strong> 直接对应"新星"，代表爆发性的创新和璀璨的未来</p>
                   <p><strong className="text-blue-300">Rock:</strong> 直接对应"石"，代表稳固、可靠和基石般的地位</p>
-                  <p><strong className="text-blue-300">组合效果:</strong> "NovaRock"现代、有力且易于记忆，完美传达科技公司属性</p>
+                  <p><strong className="text-blue-300">Alchemy:</strong> 炼金术，象征将基础算力转化为AI价值的魔法平台</p>
                 </div>
               </div>
             </div>
